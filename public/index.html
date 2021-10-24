@@ -12,7 +12,7 @@
     margin: 0;
     padding: 0;
   }
-  .wrapper {
+  body {
     position: relative;
   }
   img {
@@ -41,6 +41,10 @@
 <script>
   const target = document.querySelector('#time');
   
-  target.innerText = dayjs(Date.now()).format('YYYY年MM月DD日 HH:mm:ss');
+
+  setInterval(() => {
+    target.innerText = dayjs(Date.now()).format('YYYY年MM月DD日 HH:mm:ss');
+  }, 1000);
+  
 </script>
 </html>
