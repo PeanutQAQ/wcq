@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.bootcdn.net/ajax/libs/dayjs/1.4.1/dayjs.min.js"></script>
+  <title>Document</title>
+</head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  .wrapper {
+    position: relative;
+  }
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  #time {
+    display: block;
+    position: absolute;
+    left:98px;
+    top: 122px;
+    height: 20px;
+    line-height: 29px;
+    color: #53b571;
+    background-color: #ebf5ed;
+    font-family: Microsoft Yahei;
+  }
+</style>
+<body>
+  <div class="wrapper">
+    <div id="time"></div>
+    <a class="container" href="https://imgtu.com/i/5Wh7jI"><img src="https://z3.ax1x.com/2021/10/24/5Wh7jI.jpg" alt="5Wh7jI.jpg" border="0" /></a>
+  </div>
+</body>
+<script>
+  const target = document.querySelector('#time');
+  
+  target.innerText = dayjs(Date.now()).format('YYYY年MM月DD日 HH:mm:ss');
+</script>
+</html>
